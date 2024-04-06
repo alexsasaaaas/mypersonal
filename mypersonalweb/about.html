@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>我的經歷</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .accordion {
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .accordion:hover {
+    background-color: #45aaf2;
+  }
+
+  .panel {
+    padding: 0 18px;
+    background-color: #f1f1f1;
+    display: none;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+
+  .active, .accordion.active {
+    background-color: #45aaf2;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+
+  footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: flex;
+    bottom: 0;
+    width: 100%;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>我的經歷</h1>
+    <button class="accordion">學歷</button>
+    <div class="panel">
+      <ul>
+        <li>淡江大學：經濟學學系</li>
+        <li>國立成功大學：企業管理學系</li>
+      </ul>
+    </div>
+
+    <button class="accordion">參加過的社團</button>
+    <div class="panel">
+      <ul>
+        <li>證券研究社</li>
+        <li>管理顧問社（金融組專案生）- 專案題目：永豐金證券近三年越南市場成長策略</li>
+        <li>資料分析社</li>
+      </ul>
+    </div>
+
+    <button class="accordion">專案經驗</button>
+    <div class="panel">
+      <ul>
+        <li>元太科技電子紙創新專案</li>
+      </ul>
+    </div>
+
+    <button class="accordion">參加過的競賽</button>
+    <div class="panel">
+      <ul>
+        <li>萊雅brainstorm商業競賽</li>
+        <li>永豐銀行金融創新競賽</li>
+      </ul>
+    </div>
+
+    <button class="accordion">工作經驗</button>
+    <div class="panel">
+      <ul>
+        <li>富邦銀行個金授管部警備組</li>
+      </ul>
+    </div>
+  </div>
+
+<footer>
+  <p>我的經歷</p>
+</footer>
+
+<script>
+  var accordions = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < accordions.length; i++) {
+    accordions[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+</script>
+</body>
+</html>
+
+
